@@ -1,0 +1,576 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: #A79E9C; 
+    color: #3d4d55; 
+    margin: 0; 
+    padding: 0;
+}
+
+.header {
+    border-bottom: 2px solid #d3c3b9; 
+    background-color: #A79E9C; /* Цвет фона */
+    color: white; /* Цвет текста */
+    position: fixed; /* Закрепляет элемент */
+    top: 0; /* Привязывает меню к верхней части окна */
+    left: 0; /* Привязывает меню к левому краю */
+    width: 100%; /* Ширина меню на 100% */
+    z-index: 1000; /* Обеспечивает, чтобы меню было выше других элементов на странице */
+}
+
+.header__block {
+    display: flex; 
+    align-items: center;
+}
+
+.header__image {
+    margin-right: 15px; 
+}
+
+.header__info p {
+    color: #3d4d55;
+    margin: 0; 
+    font-size: 18px; 
+}
+
+.header__navigation {
+    margin-top: 10px; 
+}
+
+.header__list {
+    display: flex; /* Располагает элементы в строку */
+    justify-content: space-around; /* Распределяет элементы равномерно */
+    list-style: none; /* Убирает маркеры у списка */
+    margin: 0; /* Убирает отступы у списка */
+    padding: 0; /* Убирает внутренние отступы у списка */
+}
+
+.header__list-element {
+    padding: 10px 20px;
+}
+
+.header__list-element a {
+    color: #3d4d55; 
+    text-decoration: none;
+    text-align: center;
+}
+
+.header__list-element a:hover {
+    color: #10232a;
+    text-decoration: underline; 
+}
+
+.container {
+    display: flex; 
+}
+
+.side-bar {
+    font-family: 'Arial', sans-serif; 
+    width: 250px; 
+    border-right: 2px solid #d3c3b9;
+    padding-top: 150px;
+}
+
+.main-info {
+    text-align: center;
+    flex: 1; 
+    padding-left: 40px; 
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 150px;
+}
+
+.side-bar__info {
+    color: #3d4d55;
+    margin-left: 20px;
+    font-size: 18px; 
+}
+
+.side-bar__list {
+    padding-left: 0px;
+    list-style-type: none; 
+}
+
+.side-bar_list-element {
+    margin-bottom: 15px; 
+}
+
+.side-bar_list-element a {
+    color: #3d4d55; 
+    text-decoration: none; 
+}
+
+.side-bar_list-element a:hover {
+    color: #10232a;
+    text-decoration: underline; 
+}
+
+.footer {
+    font-family: 'Arial', sans-serif; 
+    border-top: 2px solid #d3c3b9; 
+    border-bottom: 2px solid #d3c3b9; 
+    text-align: left; 
+    padding: 20px; 
+}
+
+
+.styled-table {
+    margin: 20px auto; 
+    border-collapse: collapse; 
+    width: 80%; 
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #161616; 
+    padding: 12px; 
+    text-align: center; 
+}
+
+.styled-table th {
+    background-color: #3d4d55; 
+    color: white; 
+}
+
+.styled-table tr:nth-child(odd) {
+    background-color: #B58863; 
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.styled-table tr:hover {
+    background-color: #e0e0e0; 
+}
+
+.main-info__images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-zakaz{
+    transition: all 0.8s;
+    box-shadow: 10px 5px 5px #161616;
+    &:hover{box-shadow: 15px 10px 10px #161616;}
+}
+
+.main-info__describe{
+    margin-top: 20px;
+}
+
+
+.button-12 {
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Arial', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #6E6D70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-12:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+    width: calc(100% - 22px); /* Полная ширина */
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, 
+input[type="date"]:focus, select:focus, textarea:focus {
+    border-color: #4CAF50; /* Зеленая рамка при фокусе */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Тень вокруг */
+    outline: none; /* Убираем стандартное обрамление */
+}
+
+/* Стиль для текстовой области */
+textarea {
+    height: 100px;
+    resize: vertical; /* Возможность изменять высоту */
+}
+
+/* Стиль для выпадающего списка */
+select {
+    background-color: white;
+}
+
+/* Стиль для чекбокса */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Стиль для кнопки отправки */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Небольшое увеличение при наведении */
+}
+
+/* Общий стиль для формы */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+/* Стиль для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh; /* Ограничиваем высоту */
+    overflow-y: auto; /* Добавляем прокрутку для формы */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стиль для футера */
+.footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+/* Стиль для текста в футере */
+.footer__myname {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Стиль для списка и элементов списка */
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Расстояние между иконками */
+}
+
+/* Стиль для элементов списка */
+.footer__list-element {
+    display: inline-block;
+}
+
+/* Стили для ссылок в футере */
+.footer__list-element a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+/* Стили для изображений (иконок) в футере */
+.footer__list-element img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* Эффект при наведении на иконки */
+.footer__list-element a:hover img {
+    transform: scale(1.2); /* Увеличение при наведении */
+    filter: brightness(1.2); /* Ярче при наведении */
+}
+
+/* Дополнительный отступ между текстом и списком */
+.footer__myname + .footer__list {
+    margin-top: 10px;
+}
+
+/* Стили для контейнера grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
+    gap: 20px; /* расстояние между элементами */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+/* Стили для элементов grid */
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%; /* адаптивная ширина для изображения */
+    height: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 2000px){
+    .modal-content {
+        padding-top: 30%;
+        max-width: 90%; /* Расширяем форму на маленьких экранах */
+    }
+
+    /* Адаптация полей и текста формы */
+    .modal-content label,
+    .modal-content input,
+    .modal-content select,
+    .modal-content textarea,
+    .modal-content button {
+        width: 100%; /* Поля занимают 100% ширины */
+        font-size: 1em; /* Увеличиваем размер шрифта для мобильных */
+        margin-bottom: 10px;
+    }
+
+    .modal-content input,
+    .modal-content select,
+    .modal-content textarea {
+        padding: 10px; /* Увеличиваем отступы для удобства */
+    }
+}
+
+/* Медиа-запрос для экранов меньше 768px */
+@media (max-width: 768px) {
+    .modal-content {
+        padding-top: 30%;
+        max-width: 90%; /* Расширяем форму на маленьких экранах */
+    }
+
+    /* Адаптация полей и текста формы */
+    .modal-content label,
+    .modal-content input,
+    .modal-content select,
+    .modal-content textarea,
+    .modal-content button {
+        width: 100%; /* Поля занимают 100% ширины */
+        font-size: 1em; /* Увеличиваем размер шрифта для мобильных */
+        margin-bottom: 10px;
+    }
+
+    .modal-content input,
+    .modal-content select,
+    .modal-content textarea {
+        padding: 10px; /* Увеличиваем отступы для удобства */
+    }
+    .main-info {
+        padding-top: 10%;
+    }
+
+    .side-bar{
+        padding-top: 35%;
+    }
+    .styled-table th, .styled-table td {
+        padding: 8px 4px; /* ещё меньше на малых экранах */
+        font-size: 12px; /* уменьшаем шрифт */
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* Одна колонка */
+    }
+    .header__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__list-element {
+        padding: 8px 0;
+    }
+
+    .styled-table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .side-bar__info, .side-bar__list {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer__list {
+        gap: 10px;
+    }
+}
+
+/* Основные адаптивные настройки */
+@media (max-width: 1200px) {
+    /* Уменьшение размеров элементов для больших планшетов */
+    .header__list-element {
+        padding: 8px 15px;
+    }
+    .styled-table {
+        width: 90%;
+    }
+    .side-bar {
+        width: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Переход на одноуровневую структуру при средней ширине экрана */
+    .container {
+        flex-direction: column;
+    }
+    .side-bar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #d3c3b9;
+    }
+    .main-info {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Адаптация для мобильных устройств */
+    .modal-content {
+        padding-top: 85%;
+        max-width: 90%; /* Расширяем форму на маленьких экранах */
+    }
+    .header__block, .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-info {
+        padding: 10px;
+        padding-top: 10%;
+    }
+
+    .side-bar{
+        padding-top: 85%;
+    }
+
+    .header__info p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .header__navigation {
+        margin-top: 5px;
+    }
+
+    .styled-table, .footer__list {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    /* Упрощение таблиц */
+    .styled-table td, .styled-table th {
+        padding: 8px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    /* Подстройка формы */
+    form {
+        padding: 15px;
+    }
+}
+
+.styled-table-container {
+    overflow-x: auto;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Адаптивные стили для таблицы */
+.styled-table th, .styled-table td {
+    padding: 10px 5px; /* уменьшенные отступы */
+    font-size: 14px;
+}
+
+.responsive-iframe {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Соотношение 16:9 */
+    overflow: hidden;
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive-map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Соотношение 16:9 */
+    overflow: hidden;
+    margin: 0; /* Убедитесь, что отступы отсутствуют */
+}
+
+.responsive-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Высота на 100% от родительского контейнера */
+    border: none; /* Убираем рамку */
+    display: block; /* Убираем возможные пробелы вокруг */
+}

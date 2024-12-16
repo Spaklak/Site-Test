@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="stylesheet" href="styles.css">
+<!--- заголовок страницы-->
+
+<head>
+    <!--- Далее все, что идет связанное с названием вкладки/страницы. А именно иконки, название и т.п.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" sizes="16x16" type="image/x-icon">
+    <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Main-page</title>
+</head>
+<!-- основное содержимое страницы -->
+
+<body>
+    <!--- Верхняя часть страницы, которая в нашем случае используется для навишации-->
+    <header class="header">
+        <!-- просто блок -->
+        <div class="header__block">
+            <img src="images/icon_smile.png" class="header__image" alt="logo" width="50" height="50">
+            <!-- блок с информацией-->
+            <div class="header__info">
+                <p>Группа: <u>ЭФБО-09-23</u>
+                    <br>Кручаев Егор Александрович
+                </p>
+            </div>
+        </div>
+        <!-- навигационные ссылки -->
+        <nav class="header__navigation">
+            <!-- создание неупорядоченного списка -->
+
+            <ul class="header__list">
+
+                <!-- тег a используется для создания гипперссылки, а li для создания подпункта списка-->
+                <li class="header__list-element"><a href="3_work_green.html">Главная страница</a></li>
+                <li class="header__list-element"><a href="4_work_green.html">Первый семестр</a></li>
+                <li class="header__list-element"><a href="#">Второй семестр</a></li>
+                <li class="header__list-element"><a href="2_work_original.html">Услуги</a></li>
+                <li class="header__list-element"><a href="#">Авторизация</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- боковая панель -->
+    <div class="container">
+        <aside class="side-bar">
+            <p class="side-bar__info">Навигация по странице</p>
+            <ul class="side-bar__list">
+                <li class="side-bar_list-element"><a href="#frontend">Фронтенд</a></li>
+                <li class="side-bar_list-element"><a href="#backend">Бекенд</a></li>
+            </ul>
+        </aside>
+            <!-- основной контент страницы -->
+            <main class="main-info">
+                <img src="images/funny_man.png" alt="photo" width="150" height="150">
+                <h1 class="main-info__header">Разработка веб-приложений</h1>
+            
+                <!-- Секция с фото -->
+                <div class="grid-container">
+                    <!-- Первый элемент в сетке -->
+                    <div class="grid-item">
+                        <img src="images/visit.jpg" width="150" height="150" alt="Сайт-визитка">
+                        <p>Сайт-визитка</p>
+                        <button type="button" id="open_MODAL" class="button-12 knopka" data-type="Сайт-визитка" role="button">Заказать</button>
+                    </div>
+            
+                    <!-- Модальное окно -->
+                    <div id="my_modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="close_MODAL">&times;</span>
+                            <h2>Разработка веб-приложения</h2>
+                            <p>Заполните форму, и мы свяжемся с вами в ближайшее время для уточнения деталей.</p>
+            
+                            <!-- Форма заказа -->
+                            <form id="myForm" method="post" action="/space">
+                                <label for="name">Как вас зовут</label>
+                                <input type="text" name="name" id="name" placeholder="Например: Иван Иванов"><br><br>
+            
+                                <label for="email">Ваш e-mail</label>
+                                <input type="email" name="email" id="email" placeholder="test@mail.ru"><br><br>
+            
+                                <label for="tel">Телефон</label>
+                                <input type="tel" class="phon" name="phone" id="tel" placeholder="+7 999 999 14 14"><br><br>
+            
+                                <label for="country">Страна</label>
+                                <select id="country" name="country">
+                                    <option value="">Выберите страну</option>
+                                    <option value="ru">Россия</option>
+                                    <option value="kz">Казахстан</option>
+                                    <option value="cn">Китай</option>
+                                </select><br><br>
+            
+                                <label for="date">Дата</label>
+                                <input type="date" id="date" name="date"><br><br>
+            
+                                <label for="comment">Комментарий</label>
+                                <textarea id="comment" name="comment"></textarea><br><br>
+            
+                                <label for="formType">Тип сайта</label>
+                                <select id="formType" name="formType">
+                                    <option value="Сайт-визитка">Сайт-визитка</option>
+                                    <option value="Корпоративный сайт">Корпоративный сайт</option>
+                                    <option value="Интернет-магазин">Интернет-магазин</option>
+                                </select><br><br>
+            
+                                <label for="check">Согласие с обработкой персональных данных</label>
+                                <input type="checkbox" name="check" id="check" required><br><br>
+            
+                                <button type="submit">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+            
+                    <!-- Второй элемент в сетке -->
+                    <div class="grid-item">
+                        <img src="images/korporate.jpg" width="150" height="150" alt="Корпоративный сайт">
+                        <p>Корпоративный сайт</p>
+                        <button type="button" class="button-12 knopka" data-type="Корпоративный сайт">Заказать</button>
+                    </div>
+            
+                    <!-- Третий элемент в сетке -->
+                    <div class="grid-item">
+                        <img src="images/store.jpg" width="150" height="150" alt="Интернет-магазин">
+                        <p>Интернет-магазин</p>
+                        <button type="button" class="button-12 knopka" data-type="Интернет-магазин">Заказать</button>
+                    </div>
+                </div>
+            
+                <!-- Текстовый блок -->
+                <div class="main-info__text">
+                    <p>Вот такой длинный и смешной текст у меня получился...</p>
+                </div>
+            </main>
+        </div>
+        <!--нижняя часть документа, которая содержит ссылки, АП и контактные данные -->
+        <!-- в частях по типу хедер и футер, лучше указывать class="main-header", тк они могут быть и внутри самой страницы ещё -->
+        <footer class="footer">
+            <p class="footer__myname">&copy; Кручаев Егор Александрович, 2024</p>
+            <ul class="footer__list">
+                <li class="footer__list-element"><a href="https://vk.com">
+                        <img src="images/vk.png" alt="VK" width="25" height="25">
+                    </a> </li>
+                <li class="footer__list-element"><a href="https://web.whatsapp.com/">
+                        <img src="images/whatsapp.png" alt="VK" width="25" height="25">
+                    </a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tel').mask('+7 (999) 999-99-99')
+        })
+    </script>
+    <script>
+        const modal = document.getElementById("my_modal");
+        const closeBtn = document.getElementById("close_MODAL");
+        const knopki = document.querySelectorAll('.knopka');
+        const formType = document.getElementById('formType');
+        knopki.forEach((btn) => {
+            btn.onclick = function () {
+                const type = btn.getAttribute('data-type');
+                formType.value = type;
+                modal.style.display = "block";
+            }
+        });
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none"
+        }
+
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            const name_text = document.getElementById('name').value
+            const email_text = document.getElementById('email').value
+            const phone_text = document.getElementById('tel').value
+            const date_text = document.getElementById('date').value
+            const country_text = document.getElementById('country').value
+            if (!name_text || !email_text || !phone_text || !date_text || !country_text) {
+                alert('Заполните все поля')
+                event.preventDefault();
+            } else {
+                alert('Форма успешно отправлена')
+            }
+        });
+    </script>
+</body>
+
+</html>
